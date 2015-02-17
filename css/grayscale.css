@@ -139,7 +139,7 @@ a:focus {
     height: 100vh;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-bg.png) no-repeat bottom center scroll;
+    background: no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -334,4 +334,9 @@ body {
     .5px -.5px 0 #000,
     -.5px .5px 0 #000,
     .5px .5px 0 #000;  
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
 }
