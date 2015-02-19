@@ -340,3 +340,9 @@ body {
     min-height: 400px;
     background: transparent;
 }
+
+body {
+  -moz-animation-delay: 1.4s;
+  -webkit-animation-delay: 1.4s;
+  -o-animation-delay: 1.4s;
+}
