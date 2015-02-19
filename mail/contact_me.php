@@ -18,7 +18,8 @@ $email_address = $_POST['email'];
 $email->addTo("jeff.zheng.6@gmail.com")
       ->setFrom("you@youremail.com")
       ->setSubject("Website Contact Form:  $name");
-      // ->setHtml("You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address");
+      ->setHtml("You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address");
+
 $sendgrid->send($email);
 return true;			
 ?>
