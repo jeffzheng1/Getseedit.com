@@ -1,8 +1,16 @@
 <?php
-// Check for empty fields
+require '../vendor/autoload.php';
 
 $name = $_POST['name'];
 $email_address = $_POST['email'];
+
+if(empty($_POST['name'])        ||
+   empty($_POST['email'])       ||
+   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
+    echo "No arguments Provided!";
+    return false;
+   }
+
 
 $url = 'https://api.sendgrid.com/';
 $user = 'app34063474@heroku.com';
@@ -11,11 +19,11 @@ $pass = '5Jc6%pk6.';
 $params = array(
     'api_user'  => $user,
     'api_key'   => $pass,
-    'to'        => 'jeff.zheng.6@gmail.com',
-    'subject'   => '$name $email_address',
-    'html'      => 'testing body',
-    'text'      => 'testing body',
-    'from'      => 'example@sendgrid.com',
+    'to'        => 'getseedit@gmail.com',
+    'subject'   => 'Early Release Signup',
+    'html'      => 'body',
+    'text'      => $name . ":" . $email_address,
+    'from'      => 'getseedit@sendgrid.com',
   );
 
 
