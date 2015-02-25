@@ -1,5 +1,4 @@
 <?php
-require '../vendor/autoload.php';
 
 $name = $_POST['name'];
 $email_address = $_POST['email'];
@@ -21,7 +20,7 @@ $params = array(
     'api_key'   => $pass,
     'to'        => 'getseedit@gmail.com',
     'subject'   => 'Early Release Signup',
-    'html'      => 'body',
+    'html'      => $name . ":" . $email_address,
     'text'      => $name . ":" . $email_address,
     'from'      => 'getseedit@sendgrid.com',
   );
