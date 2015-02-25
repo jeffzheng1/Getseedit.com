@@ -31,10 +31,28 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <script src="js/jquery.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").delay(2000).fadeOut("slow", function() {
+                $(".typing-target").typed({
+                    strings: ["Welcome to the future of gardening"],
+                    typeSpeed: 50,
+                    backDelay: 500,
+                  });
+            });
+        }); 
+    </script>
 
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <div class="se-pre-con"></div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -73,7 +91,7 @@
                     <div class="row">
                         <div class="col-md-12"> 
                             <div class="typing">
-                                <h1 style="font-size:50px">
+                                <h1 style="font-size:45px">
                                     <span class="typing-target outline"></span>
                                 </h1>    
                             </div>
@@ -135,7 +153,8 @@
     </section>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    
+ 
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -148,14 +167,6 @@
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
     <script>
-      $(function(){
-          $(".typing-target").typed({
-            strings: ["Welcome to the future of gardening"],
-            typeSpeed: 50,
-            backDelay: 500,
-          });
-      });
-      $('.intro').addClass('animated fadeIn');
     </script>
 
     <!-- Custom Theme JavaScript -->
