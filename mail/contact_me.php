@@ -20,8 +20,8 @@ $params = array(
     'api_key'   => $pass,
     'to'        => 'getseedit@gmail.com',
     'subject'   => 'Early Release Signup',
-    'html'      => $name . ":" . $email_address,
-    'text'      => $name . ":" . $email_address,
+    'html'      => $name . " : " . $email_address,
+    'text'      => $name . " : " . $email_address,
     'from'      => 'getseedit@sendgrid.com',
   );
 
